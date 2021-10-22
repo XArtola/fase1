@@ -13,11 +13,26 @@ public class WebAplikazioa {
 		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
 		
-		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
-		h.hasieratu("fitxategiak/smallwords.txt");
+		i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");	
+		h.hasieratu("fitxategiak/words.txt");
 		
-		System.out.println(h.getHitzak().getLista().get(4096).getDatua());
+		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
+/*	i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
+	h.hasieratu("fitxategiak/smallwords.txt");
+	
+	
+	for(int j = 0; j < i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().size(); j++) {
+		System.out.println(i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().get(j).getDomeinua());
 		
+		
+	}*/
+	
+		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
+
+		
+	
+	
+	
 		int aukera = 1;
 		Scanner sc = new Scanner(System.in);
 		String hitza;

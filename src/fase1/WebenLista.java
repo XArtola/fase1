@@ -44,7 +44,7 @@ public class WebenLista {
 	*/
 	public void estekaErantsi(int idJatorriWeba, int idHelburuWeba) {
 		
-		Web jatorri =  this.webenLista.get(idHelburuWeba);
+		Web jatorri =  this.webenLista.get(idJatorriWeba);
 		
 		Web helburu = this.webenLista.get(idHelburuWeba);
 		

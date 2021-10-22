@@ -93,6 +93,8 @@ public class Hiztegia {
 
 							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
 							ezker = eskuin + 1;
+							
+							System.out.println(hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
 
 						}
 
@@ -110,6 +112,8 @@ public class Hiztegia {
 					if (hitzak.getLista().get(erdiko).getDatua() == bilatzeko) {
 
 						hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
+						System.out.println(hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
+
 
 					}
 
