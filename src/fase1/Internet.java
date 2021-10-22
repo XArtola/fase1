@@ -6,17 +6,19 @@ import java.util.Scanner;
 
 public class Internet {
 
-	private static Internet internetInstance;
+	private static Internet internetInstance = new Internet();;
 
 	private WebenLista webak;
-	
-	private Hiztegia hiztegia= Hiztegia.getHiztegiaInstance();
+
+//	private Hiztegia hiztegia;
 
 	// Eraikitzailea
 
 	private Internet() {
-		
+
 		this.webak = new WebenLista();
+
+//		this.hiztegia = Hiztegia.getHiztegiaInstance();
 	}
 
 	// Get/Seterrak
@@ -30,13 +32,15 @@ public class Internet {
 	}
 
 	public static Internet getInternetInstance() {
+		/*
+		 * if (internetInstance == null)
+		 * 
+		 * return new Internet();
+		 * 
+		 * else return internetInstance;
+		 */
 
-		if (internetInstance == null)
-
-			return new Internet();
-
-		else
-			return internetInstance;
+		return internetInstance;
 	}
 
 	/**
@@ -62,9 +66,11 @@ public class Internet {
 
 			this.webak.webaErantsi(w);
 
+
 		}
 
 		sc.close();
+
 
 	}
 
@@ -117,18 +123,33 @@ public class Internet {
 	 */
 	public void webBilatzailea(String s) {
 		
-		Hitza h = hiztegia.hitzaBilatu(s);
+		Hitza h = Hiztegia.getHiztegiaInstance().hitzaBilatu(s);
 		
-		if(h == null)
-			
+		//System.out.println(h.getDatua());
+
+		if (h == null) {
+
 			System.out.println("Ez dago web-orririk gako hitz horrekin");
-		
-		int i =0;
-		
-		for(Web w : h.getWebOrrienLista()) {
-			
-			System.out.println(i+" - "+w.getDomeinua());
-			
+			System.out.println("");
+		}
+
+		else if (h.getWebOrrienLista() == null) {
+
+			System.out.println("Ez dago web-orririk gako hitz horrekin");
+			System.out.println("");
+		}
+
+		else {
+			int i = 0;
+
+			for (Web w : h.getWebOrrienLista()) {
+
+				System.out.println(i + " - " + w.getDomeinua());
+
+				i++;
+
+			}
+
 		}
 
 	}

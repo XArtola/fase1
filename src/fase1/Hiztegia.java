@@ -6,21 +6,17 @@ import java.util.Scanner;
 
 public class Hiztegia {
 
-	private static Hiztegia hiztegiaInstance;
+	private static Hiztegia hiztegiaInstance = new Hiztegia();;
 
 	private HitzenLista hitzak;
 
-	private Internet internet;
+//	private Internet internet;
 
 	// Eraikitzailea
 
 	private Hiztegia() {
 
-		hiztegiaInstance = new Hiztegia();
-
 		this.hitzak = new HitzenLista();
-
-		internet = Internet.getInternetInstance();
 
 	}
 
@@ -28,13 +24,7 @@ public class Hiztegia {
 
 	public static Hiztegia getHiztegiaInstance() {
 
-		if (hiztegiaInstance == null)
-
-			return new Hiztegia();
-
-		else
-
-			return hiztegiaInstance;
+		return hiztegiaInstance;
 	}
 
 	public HitzenLista getHitzak() {
@@ -79,44 +69,58 @@ public class Hiztegia {
 	 */
 	private void hitzenWebakKonputatu() {
 
-		WebenLista w = internet.getWebak();
-
-		for (Web web : w.getWebenLista()) {
+		for (Web web : Internet.getInternetInstance().getWebak().getWebenLista()) {
 
 			String domeinua = web.getDomeinua();
 
 			for (int i = 4; i <= 10; i++) {
 
-				for (int j = 0; j < domeinua.length() - 1 - i; j++) {
+				for (int j = 0; j <= domeinua.length() - i; j++) {
 
 					// Hitzen bilaketa bitarra compareTo erabiliz
 					int ezker, eskuin, erdiko;
-					String bilatzeko = domeinua.substring(j, i);
+					String bilatzeko = domeinua.substring(j, j + i);
+					// System.out.println(bilatzeko);
+
 					ezker = 0;
 					eskuin = hitzak.getLista().size() - 1;
 					erdiko = (ezker + eskuin) / 2;
 
 					while (ezker < eskuin && hitzak.getLista().get(erdiko).getDatua() != bilatzeko) {
 
-						int konparaketa = hitzak.getLista().get(erdiko).getDatua().compareTo(bilatzeko);
+						int konparaketa = bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua());
 
 						if (konparaketa == 0) {
 
 							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-
+							// Proba
+							System.out.println("Hitza: \t" + hitzak.getLista().get(erdiko).getDatua()
+									+ " \t Domeinua: \t" + web.getDomeinua());
+							// Proba
 							ezker = eskuin + 1;
 
 						}
 
 						else if (konparaketa < 0) {
-
-							ezker = erdiko + 1;
+							eskuin = erdiko - 1;
 
 						}
 
 						else
-							eskuin = erdiko - 1;
+							ezker = erdiko + 1;
+
 						erdiko = (ezker + eskuin) / 2;
+					}
+
+					if (hitzak.getLista().get(erdiko).getDatua() == bilatzeko) {
+
+						hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
+
+						// Proba
+						System.out.println("Hitza: \t" + hitzak.getLista().get(erdiko).getDatua() + " \t Domeinua: \t"
+								+ web.getDomeinua());
+						// Proba
+
 					}
 
 				}
@@ -152,10 +156,15 @@ public class Hiztegia {
 	public Hitza hitzaBilatu(String s) {
 
 		for (Hitza hitza : hitzak.getLista()) {
+			System.out.print("\t"+hitza.getDatua());
+			System.out.print("\t"+hitza.getDatua() == s);
+			System.out.println();
 
-			if (hitza.getDatua() == s)
+			if (hitza.getDatua() == s) {
+				System.out.print(hitza.getDatua() == s);
 
 				return hitza;
+			}
 
 		}
 

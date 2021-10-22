@@ -9,11 +9,14 @@ public class WebAplikazioa {
 	public static void main(String[] args) throws IOException {
 		//  SORTU ETA HASIERATU HIZTEGIA (Singleton)
 		//  SORTU ETA HASIERATU INTERNET (Singleton)
-		
-		Internet i = Internet.getInternetInstance();
-		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");
+
+		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
-		h.hasieratu("fitxategiak/words.txt");
+		
+		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
+		h.hasieratu("fitxategiak/smallwords.txt");
+		
+		System.out.println(h.getHitzak().getLista().get(4096).getDatua());
 		
 		int aukera = 1;
 		Scanner sc = new Scanner(System.in);
