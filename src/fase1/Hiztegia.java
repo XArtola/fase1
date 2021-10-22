@@ -86,25 +86,6 @@ public class Hiztegia {
 					erdiko = (ezker + eskuin) / 2;
 
 					while (ezker < eskuin &&  bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) != 0) {
-
-						//int konparaketa = bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua());
-
-				/*		if (konparaketa == 0) {
-
-							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-							ezker = eskuin + 1;
-							
-							System.out.println(hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
-
-						}
-
-						else if (konparaketa < 0) {
-							eskuin = erdiko - 1;
-
-						}
-
-						else
-							ezker = erdiko + 1;*/
 						
 						if(bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) < 0)
 								

@@ -13,19 +13,19 @@ public class WebAplikazioa {
 		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
 		
-	//	i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");	
-		//h.hasieratu("fitxategiak/words.txt");
+		i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");	
+		h.hasieratu("fitxategiak/words.txt");
 		
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
-		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
-		h.hasieratu("fitxategiak/smallwords.txt");
+/*		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
+		h.hasieratu("fitxategiak/smallwords.txt");*/
 	
 	
-		for(int j = 0; j < i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().size(); j++) {
+/*		for(int j = 0; j < i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().size(); j++) {
 			System.out.println(i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().get(j).getDomeinua());
 			
 			
-		}
+		}*/
 	
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
 
