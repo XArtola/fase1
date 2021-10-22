@@ -13,11 +13,11 @@ public class WebAplikazioa {
 		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
 		
-		i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");	
-		h.hasieratu("fitxategiak/words.txt");
+	//	i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");	
+		//h.hasieratu("fitxategiak/words.txt");
 		
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
-/*	i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
+	i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
 	h.hasieratu("fitxategiak/smallwords.txt");
 	
 	
@@ -25,7 +25,7 @@ public class WebAplikazioa {
 		System.out.println(i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().get(j).getDomeinua());
 		
 		
-	}*/
+	}
 	
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
 
