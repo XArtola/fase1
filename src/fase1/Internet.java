@@ -125,8 +125,6 @@ public class Internet {
 		
 		Hitza h = Hiztegia.getHiztegiaInstance().hitzaBilatu(s);
 		
-		//System.out.println(h.getDatua());
-
 		if (h == null) {
 
 			System.out.println("Ez dago web-orririk gako hitz horrekin");
@@ -144,11 +142,14 @@ public class Internet {
 
 			for (Web w : h.getWebOrrienLista()) {
 
-				System.out.println(i + " - " + w.getDomeinua());
+				System.out.println("\t"+i + " - " + w.getDomeinua());
 
 				i++;
 
 			}
+			
+			System.out.println("");
+
 
 		}
 

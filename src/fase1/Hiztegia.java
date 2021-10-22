@@ -80,7 +80,6 @@ public class Hiztegia {
 					// Hitzen bilaketa bitarra compareTo erabiliz
 					int ezker, eskuin, erdiko;
 					String bilatzeko = domeinua.substring(j, j + i);
-					// System.out.println(bilatzeko);
 
 					ezker = 0;
 					eskuin = hitzak.getLista().size() - 1;
@@ -93,10 +92,6 @@ public class Hiztegia {
 						if (konparaketa == 0) {
 
 							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-							// Proba
-							System.out.println("Hitza: \t" + hitzak.getLista().get(erdiko).getDatua()
-									+ " \t Domeinua: \t" + web.getDomeinua());
-							// Proba
 							ezker = eskuin + 1;
 
 						}
@@ -115,11 +110,6 @@ public class Hiztegia {
 					if (hitzak.getLista().get(erdiko).getDatua() == bilatzeko) {
 
 						hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-
-						// Proba
-						System.out.println("Hitza: \t" + hitzak.getLista().get(erdiko).getDatua() + " \t Domeinua: \t"
-								+ web.getDomeinua());
-						// Proba
 
 					}
 
@@ -156,12 +146,8 @@ public class Hiztegia {
 	public Hitza hitzaBilatu(String s) {
 
 		for (Hitza hitza : hitzak.getLista()) {
-			System.out.print("\t"+hitza.getDatua());
-			System.out.print("\t"+hitza.getDatua() == s);
-			System.out.println();
 
-			if (hitza.getDatua() == s) {
-				System.out.print(hitza.getDatua() == s);
+			if (hitza.getDatua().contentEquals(s)) {
 
 				return hitza;
 			}
