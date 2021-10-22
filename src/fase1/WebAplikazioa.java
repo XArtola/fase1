@@ -10,8 +10,10 @@ public class WebAplikazioa {
 		//  SORTU ETA HASIERATU HIZTEGIA (Singleton)
 		//  SORTU ETA HASIERATU INTERNET (Singleton)
 		
-		
-		
+		Internet i = Internet.getInternetInstance();
+		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");
+		Hiztegia h = Hiztegia.getHiztegiaInstance();
+		h.hasieratu("fitxategiak/words.txt");
 		
 		int aukera = 1;
 		Scanner sc = new Scanner(System.in);
@@ -24,9 +26,9 @@ public class WebAplikazioa {
 			switch(aukera) {
 			case 1: System.out.println("Sartu gako-hitz bat:");			        
 			        hitza=sc.nextLine();
-				// OSATU
-				
-				
+			        hitza.trim();
+			        
+			        i.webBilatzailea(hitza);
 				
 				    break;
 			default: break;
