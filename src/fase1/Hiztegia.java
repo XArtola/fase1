@@ -85,35 +85,25 @@ public class Hiztegia {
 					eskuin = hitzak.getLista().size() - 1;
 					erdiko = (ezker + eskuin) / 2;
 
-					while (ezker < eskuin && hitzak.getLista().get(erdiko).getDatua() != bilatzeko) {
-
-						int konparaketa = bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua());
-
-						if (konparaketa == 0) {
-
-							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-							ezker = eskuin + 1;
-							
-							System.out.println(hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
-
-						}
-
-						else if (konparaketa < 0) {
-							eskuin = erdiko - 1;
-
-						}
-
+					while (ezker < eskuin &&  bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) != 0) {
+						
+						if(bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) < 0)
+								
+								eskuin = erdiko - 1;
+								
 						else
+							
 							ezker = erdiko + 1;
-
+								
 						erdiko = (ezker + eskuin) / 2;
 					}
 
-					if (hitzak.getLista().get(erdiko).getDatua() == bilatzeko) {
-
-						hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
-						System.out.println(hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
-
+					if (bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) == 0) {
+						// Konprobatu bi aldiz berdina ez jartzeko
+						if(!hitzak.getLista().get(erdiko).getWebOrrienLista().contains(web)) {
+							hitzak.getLista().get(erdiko).getWebOrrienLista().add(web);
+							System.out.println("a "+hitzak.getLista().get(erdiko).getDatua()+"\t"+web.getDomeinua());
+							}
 
 					}
 
