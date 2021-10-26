@@ -15,8 +15,6 @@ public class Internet {
 	private Internet() {
 
 		this.webak = new WebenLista();
-
-//		this.hiztegia = Hiztegia.getHiztegiaInstance();
 	}
 
 	// Get/Seterrak
@@ -140,7 +138,6 @@ public class Internet {
 			}
 			
 			System.out.println("");
-
 
 		}
 

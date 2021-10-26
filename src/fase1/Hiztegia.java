@@ -10,8 +10,6 @@ public class Hiztegia {
 
 	private HitzenLista hitzak;
 
-//	private Internet internet;
-
 	// Eraikitzailea
 
 	private Hiztegia() {
@@ -86,7 +84,6 @@ public class Hiztegia {
 						// Konprobatu bi aldiz berdina ez jartzeko
 						if(!bilaketa.getWebOrrienLista().contains(web)) {
 							bilaketa.getWebOrrienLista().add(web);
-						//	System.out.println("a "+bilaketa.getDatua()+"\t"+web.getDomeinua());
 							}
 
 					}
