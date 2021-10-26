@@ -11,12 +11,12 @@ public class WebAplikazioa {
 		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
 		
-		i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");
-		h.hasieratu("fitxategiak/words.txt");
+	//	i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");
+		//h.hasieratu("fitxategiak/words.txt");
 		
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
-	//	i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
-	//	h.hasieratu("fitxategiak/smallwords.txt");
+		i.hasieratu("fitxategiak/smallindex", "fitxategiak/smallpld-arc");	
+	h.hasieratu("fitxategiak/smallwords.txt");
 	
 	
 /*		for(int j = 0; j < i.getWebak().getWebenLista().get(0).getEstekenLista().getWebenLista().size(); j++) {
@@ -39,8 +39,8 @@ public class WebAplikazioa {
 			System.out.println("1. Web-orriak bilatu gako-hitzen bidez");
 			System.out.println("0. Irten");
 			String irakurritakoa = sc.nextLine();
-			String pattern = "0|1";
-			while(!pattern.matches(irakurritakoa)) {
+			String pattern = "[01]";
+			while(!irakurritakoa.matches(pattern)) {
 				
 				System.out.println("Zer egin nahi duzu?");
 				System.out.println("1. Web-orriak bilatu gako-hitzen bidez");
