@@ -48,7 +48,7 @@ public class WebAplikazioa {
 				irakurritakoa = sc.nextLine();
 			
 			}
-			aukera = Integer.parseInt(sc.nextLine());
+			aukera = Integer.parseInt(irakurritakoa);
 			switch(aukera) {
 			case 1: System.out.println("Sartu gako-hitz bat:");			        
 			        hitza=sc.nextLine();
