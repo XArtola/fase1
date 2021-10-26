@@ -10,8 +10,6 @@ public class Internet {
 
 	private WebenLista webak;
 
-//	private Hiztegia hiztegia;
-
 	// Eraikitzailea
 
 	private Internet() {
@@ -32,13 +30,6 @@ public class Internet {
 	}
 
 	public static Internet getInternetInstance() {
-		/*
-		 * if (internetInstance == null)
-		 * 
-		 * return new Internet();
-		 * 
-		 * else return internetInstance;
-		 */
 
 		return internetInstance;
 	}

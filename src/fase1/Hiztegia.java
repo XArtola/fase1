@@ -78,29 +78,11 @@ public class Hiztegia {
 				for (int j = 0; j <= domeinua.length() - i; j++) {
 
 					// Hitzen bilaketa bitarra compareTo erabiliz
-				//	int ezker, eskuin, erdiko;
 					String bilatzeko = domeinua.substring(j, j + i);
 					
 					Hitza bilaketa = this.hitzaBilatu(bilatzeko);
 					
-				/*	ezker = 0;
-					eskuin = hitzak.getLista().size() - 1;
-					erdiko = (ezker + eskuin) / 2;
-
-					while (ezker < eskuin &&  bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) != 0) {
-						
-						if(bilatzeko.compareTo(hitzak.getLista().get(erdiko).getDatua()) < 0)
-								
-								eskuin = erdiko - 1;
-								
-						else
-							
-							ezker = erdiko + 1;
-								
-						erdiko = (ezker + eskuin) / 2;
-					}*/
-
-					if (bilaketa != null) {
+				if (bilaketa != null) {
 						// Konprobatu bi aldiz berdina ez jartzeko
 						if(!bilaketa.getWebOrrienLista().contains(web)) {
 							bilaketa.getWebOrrienLista().add(web);
@@ -129,7 +111,6 @@ public class Hiztegia {
 	public void hasieratu(String fitxIzena) throws FileNotFoundException {
 
 		hitzakKargatu(fitxIzena);
-		System.out.println("Hitzak kargatuta");
 		hitzenWebakKonputatu();
 
 	}
@@ -144,16 +125,6 @@ public class Hiztegia {
 		
 		return this.hitzak.hitzaBilatu(s);
 
-		/*for (Hitza hitza : hitzak.getLista()) {
-
-			if (hitza.getDatua().contentEquals(s)) {
-
-				return hitza;
-			}
-
-		}
-
-		return null;*/
 	}
 
 }

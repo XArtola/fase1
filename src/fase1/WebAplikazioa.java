@@ -7,14 +7,11 @@ public class WebAplikazioa {
 
 
 	public static void main(String[] args) throws IOException {
-		//  SORTU ETA HASIERATU HIZTEGIA (Singleton)
-		//  SORTU ETA HASIERATU INTERNET (Singleton)
-
+	
 		Internet i = Internet.getInternetInstance();		
 		Hiztegia h = Hiztegia.getHiztegiaInstance();
 		
 		i.hasieratu("fitxategiak/index", "fitxategiak/pld-arc");
-		System.out.println("Orain hiztegia");
 		h.hasieratu("fitxategiak/words.txt");
 		
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
@@ -41,6 +38,16 @@ public class WebAplikazioa {
 			System.out.println("Zer egin nahi duzu?");
 			System.out.println("1. Web-orriak bilatu gako-hitzen bidez");
 			System.out.println("0. Irten");
+			String irakurritakoa = sc.nextLine();
+			String pattern = "0|1";
+			while(!pattern.matches(irakurritakoa)) {
+				
+				System.out.println("Zer egin nahi duzu?");
+				System.out.println("1. Web-orriak bilatu gako-hitzen bidez");
+				System.out.println("0. Irten");
+				irakurritakoa = sc.nextLine();
+			
+			}
 			aukera = Integer.parseInt(sc.nextLine());
 			switch(aukera) {
 			case 1: System.out.println("Sartu gako-hitz bat:");			        

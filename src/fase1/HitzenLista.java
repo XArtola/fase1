@@ -46,15 +46,6 @@ public class HitzenLista {
 	 */
 	public Hitza hitzaBilatu(String s) {
 
-		/*
-		 * int i = this.lista.indexOf(new Hitza(s));
-		 * 
-		 * if(i >= 0) {
-		 * 
-		 * return this.lista.get(i); }
-		 * 
-		 * return null;
-		 */
 		// Listako elementu kopurua 0 denerako erroreak sahiesteko
 		if (this.lista.size() > 0) {
 			int ezker, eskuin, erdiko;
