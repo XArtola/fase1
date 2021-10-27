@@ -30,8 +30,6 @@ public class HitzenLista {
 	 */
 	public void hitzaGehitu(Hitza hitza) {
 
-		// if(!this.lista.contains(hitza))
-
 		if (this.hitzaBilatu(hitza.getDatua()) == null)
 
 			this.lista.add(hitza);
@@ -48,6 +46,7 @@ public class HitzenLista {
 
 		// Listako elementu kopurua 0 denerako erroreak sahiesteko
 		if (this.lista.size() > 0) {
+			// Bilaketa bitarra egiteko
 			int ezker, eskuin, erdiko;
 			ezker = 0;
 			eskuin = this.lista.size() - 1;
@@ -69,7 +68,7 @@ public class HitzenLista {
 				return null;
 
 		}
-		
+
 		return null;
 
 	}

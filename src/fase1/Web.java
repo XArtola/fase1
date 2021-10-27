@@ -1,26 +1,26 @@
 package fase1;
 
 public class Web {
-	
+
 	private int id;
-	
+
 	private String domeinua;
-	
+
 	private WebenLista estekenLista;
-	
+
 	// Eraikitzailea
-	
+
 	public Web(int id, String domeinua) {
-		
+
 		this.id = id;
-		
+
 		this.setDomeinua(domeinua);
-		
+
 		this.setEstekenLista(new WebenLista());
 	}
-	
+
 	// Get/Seterrak
-	
+
 	public int getId() {
 		return id;
 	}
@@ -44,13 +44,13 @@ public class Web {
 	public void setEstekenLista(WebenLista estekenLista) {
 		this.estekenLista = estekenLista;
 	}
-	
-	@Override
-    public boolean equals(Object obj) {
-        Web w= (Web)obj;
-        if (this.domeinua.equals(w.domeinua)) return true;
-        return false;
-    }
 
+	@Override
+	public boolean equals(Object obj) {
+		Web w = (Web) obj;
+		if (this.domeinua.equals(w.domeinua))
+			return true;
+		return false;
+	}
 
 }

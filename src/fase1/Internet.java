@@ -55,11 +55,9 @@ public class Internet {
 
 			this.webak.webaErantsi(w);
 
-
 		}
 
 		sc.close();
-
 
 	}
 
@@ -111,9 +109,9 @@ public class Internet {
 	 * @param s: hitzari dagokion stringa
 	 */
 	public void webBilatzailea(String s) {
-		
+
 		Hitza h = Hiztegia.getHiztegiaInstance().hitzaBilatu(s);
-		
+
 		if (h == null) {
 
 			System.out.println("Ez dago web-orririk gako hitz horrekin");
@@ -131,12 +129,12 @@ public class Internet {
 
 			for (Web w : h.getWebOrrienLista().getWebenLista()) {
 
-				System.out.println("\t"+i + " - " + w.getDomeinua());
+				System.out.println("\t" + i + " - " + w.getDomeinua());
 
 				i++;
 
 			}
-			
+
 			System.out.println("");
 
 		}

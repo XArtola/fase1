@@ -77,16 +77,16 @@ public class Hiztegia {
 
 					// Hitzen bilaketa bitarra compareTo erabiliz
 					String bilatzeko = domeinua.substring(j, j + i);
-					
+
 					Hitza bilaketa = this.hitzaBilatu(bilatzeko);
-					
-				if (bilaketa != null) {
+
+					if (bilaketa != null) {
 						// Konprobatu bi aldiz berdina ez jartzeko
-						if(!bilaketa.getWebOrrienLista().getWebenLista().contains(web)) {
+						if (!bilaketa.getWebOrrienLista().getWebenLista().contains(web)) {
 
 							bilaketa.getWebOrrienLista().getWebenLista().add(web);
-						//	System.out.println("a "+bilaketa.getDatua()+"\t"+web.getDomeinua());
-							}
+							// System.out.println("a "+bilaketa.getDatua()+"\t"+web.getDomeinua());
+						}
 
 					}
 
@@ -121,7 +121,7 @@ public class Hiztegia {
 	 * @return s stringari dagokion hitza (hiztegian badago), null bestela
 	 */
 	public Hitza hitzaBilatu(String s) {
-		
+
 		return this.hitzak.hitzaBilatu(s);
 
 	}
