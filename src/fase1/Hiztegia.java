@@ -82,8 +82,10 @@ public class Hiztegia {
 					
 				if (bilaketa != null) {
 						// Konprobatu bi aldiz berdina ez jartzeko
-						if(!bilaketa.getWebOrrienLista().contains(web)) {
-							bilaketa.getWebOrrienLista().add(web);
+						if(!bilaketa.getWebOrrienLista().getWebenLista().contains(web)) {
+
+							bilaketa.getWebOrrienLista().getWebenLista().add(web);
+						//	System.out.println("a "+bilaketa.getDatua()+"\t"+web.getDomeinua());
 							}
 
 					}

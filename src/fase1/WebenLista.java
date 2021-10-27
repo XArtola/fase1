@@ -49,9 +49,7 @@ public class WebenLista {
 		Web helburu = this.webenLista.get(idHelburuWeba);
 		
 		jatorri.getEstekenLista().webenLista.add(helburu);
-		
-		
-		
+				
 	}
 
 }

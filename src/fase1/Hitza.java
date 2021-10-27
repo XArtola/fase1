@@ -6,7 +6,7 @@ public class Hitza {
 	
 	private String datua;
 	
-	private ArrayList<Web> webOrrienLista;
+	private WebenLista webOrrienLista;
 	
 	// Eraikitzailea
 	
@@ -14,7 +14,7 @@ public class Hitza {
 		
 		this.setDatua(datua);
 		
-		this.setWebOrrienLista(new ArrayList<Web>());
+		this.setWebOrrienLista(new WebenLista());
 		
 		
 	}
@@ -29,12 +29,12 @@ public class Hitza {
 		this.datua = datua;
 	}
 
-	public ArrayList<Web> getWebOrrienLista() {
+	public WebenLista getWebOrrienLista() {
 		return webOrrienLista;
 	}
 
-	public void setWebOrrienLista(ArrayList<Web> webOrrienLista) {
-		this.webOrrienLista = webOrrienLista;
+	public void setWebOrrienLista(WebenLista webenLista) {
+		this.webOrrienLista = webenLista;
 	}
 	
 	@Override

@@ -129,7 +129,7 @@ public class Internet {
 		else {
 			int i = 0;
 
-			for (Web w : h.getWebOrrienLista()) {
+			for (Web w : h.getWebOrrienLista().getWebenLista()) {
 
 				System.out.println("\t"+i + " - " + w.getDomeinua());
 

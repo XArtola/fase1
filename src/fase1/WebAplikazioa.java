@@ -26,10 +26,6 @@ public class WebAplikazioa {
 		}*/
 	
 		///////////////////////////////////PROBAK EGITEKO////////////////////////////////////////////
-
-		
-	
-	
 	
 		int aukera = 1;
 		Scanner sc = new Scanner(System.in);
