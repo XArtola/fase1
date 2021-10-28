@@ -47,30 +47,28 @@ public class HitzenLista {
 		// Listako elementu kopurua 0 denerako erroreak sahiesteko
 		if (this.lista.size() > 0) {
 			// Bilaketa bitarra egiteko
-			int ezker, eskuin, erdiko;
+			int ezker, eskuin, erdiko, konparaketa;
 			ezker = 0;
 			eskuin = this.lista.size() - 1;
 			erdiko = (ezker + eskuin) / 2;
-			while (ezker < eskuin & s.compareTo(this.lista.get(erdiko).getDatua()) != 0) {
-				if (s.compareTo(this.lista.get(erdiko).getDatua()) < 0)
+			konparaketa = s.compareTo(this.lista.get(erdiko).getDatua());
+			while (ezker < eskuin & konparaketa != 0) {
+				if (konparaketa < 0)
 					eskuin = erdiko - 1;
 				else
 					ezker = erdiko + 1;
 				erdiko = (ezker + eskuin) / 2;
+				konparaketa = s.compareTo(this.lista.get(erdiko).getDatua());
 			}
 
-			if (s.compareTo(this.lista.get(erdiko).getDatua()) == 0)
-
+			if (konparaketa == 0)
 				return this.lista.get(erdiko);
 
 			else
-
 				return null;
 
 		}
-
 		return null;
-
 	}
 
 }

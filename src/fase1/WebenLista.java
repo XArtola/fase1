@@ -27,7 +27,9 @@ public class WebenLista {
 	/**
 	 * Web bat gehitzen dio listari
 	 * 
-	 * @param web: gehitzen den weba AURRE: web ez dago listan
+	 * @param web: gehitzen den weba 
+	 * 
+	 * AURRE: web ez dago listan
 	 */
 	public void webaErantsi(Web web) {
 		this.webenLista.add(web);
