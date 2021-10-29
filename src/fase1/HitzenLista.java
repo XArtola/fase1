@@ -42,10 +42,10 @@ public class HitzenLista {
 	 * @param s: bilatu nahi den hitzaren testua (stringa)
 	 * @return s stringari dagokion hitza (listan badago), null bestela
 	 */
-	public Hitza hitzaBilatu(String s) {
+	public Hitza hitzaBilatu(String s) {		
 
 		// Listako elementu kopurua 0 denerako erroreak sahiesteko
-		if (this.lista.size() > 0) {
+		if (this.lista.size() > 0 && s.length()>=4 && s.length()<=10) {
 			// Bilaketa bitarra egiteko
 			int ezker, eskuin, erdiko, konparaketa;
 			ezker = 0;
